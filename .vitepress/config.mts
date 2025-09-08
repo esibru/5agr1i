@@ -37,7 +37,7 @@ export default defineConfig({
         ],
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/esibru/5clo1r' }
+            { icon: 'github', link: 'https://github.com/esibru/5agr1i' }
         ],
 
         lastUpdated: {
