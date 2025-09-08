@@ -7,7 +7,7 @@ export default defineConfig({
     titleTemplate: 'AGR1i - :title',
     description: "Notes de cours",
     lang: 'fr-be',
-    base: '/4agr1i',
+    base: '/4agr1i/',
     srcDir: './src',
     outDir: './public',
     lastUpdated: true,
