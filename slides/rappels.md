@@ -127,7 +127,9 @@ style: |
   
   
 # Administration et gestion des réseaux I
+<br/>
 
+## Rappels
 
 ![bg](images/vic20.jpg)
 
@@ -139,20 +141,6 @@ _paginate: false
 
 ---
 
-**Pierre Bettens**  
-_pbt_
-
-#️⃣ irc.libera.chat / #esi
-📬 pbettens@he2b.be
-🗨️ physiquement / _gchat_ / Discord
-
-<!--
-_header: 'AGR1i - Administration et gestion des réseaux I'
--->
-
-
----
-
 ![bg w:90%](images/grille-cut.png)
 
 <!--
@@ -161,54 +149,69 @@ _footer: ''
 _header: ''
 -->
 
-# Administration et gestion des réseaux I
+# Rappels nécessaires au cours
 
-<div class=columns>
-<div>
-Cours / laboratoire 
-
-_Présentation orale_  
-_Manipulation sur machine_
-
-</div><div>
-
-|Détails |ECTS| Heures
-|--|--|--
-|| 2 | 24
-
-</div></div>
-<br/>
-<br/>
-
-[Fiche ECTS](https://ects.esi-bru.be/online/cours/ac2526_5agr1i_5agr1i.html)
-
-# Administration et gestion des réseaux I
-
-Support de cours 
-
-- Ces _slides_
-- Des notes (genre syllabus)
-- Des supports pour les exercices
-
-
-# Évaluation
-<br />
-
-Examen oral / machine
-
-![bg](images/omg_spaghetti_o__s_by_billyunderscorebwa.jpg)
+![bg](images/tux-clown.png)
 
 <!--
-_header: ''
 _footer: ''
+_header: ''
 _paginate: ''
-_class: highlight
 -->
 
-# Administration et gestion des réseaux I
+# Filesystem linux
 
-Sujets abordés 
+- hiérarchique, organisé en arborescence à partir de la racine `/`.
+- un seul _filesystem_ - plusieurs points de montage
+- plusieurs répertoires dédiés : `/etc`, `/bin`…
 
-Les concepts essentiels de la couche applicative du modèle OSI, notamment :
+![bg right:50% w:90%](images/linux-filesystem.png)
 
-**SMTP** (_Simple Mail Transfer Protocol_) ~ **DNS** (_Domain Name Service_) ~ **SAMBA** (_SMB/CIFS_) ~ **PAM** (_Pluggable Authentication Modules_) ~ **LDAP** (_Lightweight Directory Access Protocol_) ~ **ACL** (_Access Control List_) ~ **HTTP(s)** (_Hyper Text Transfer Protocol_) 
+# Droits d'accès 
+
+- Chaque fichier/répertoire a des droits : **read (r)**, **write (w)**, **execute (x)**
+- Droits attribués à : **u** : user (owner), **g** : group, **o** : others
+- Commandes : `ls -l`, `chmod`, `chown`, `chgrp`…
+- Représentation octale : `chmod 754 fichier`
+
+
+<br/>
+
+Exemple : `-rwxr-xr--`
+    - **u** : rwx (lecture, écriture, exécution)
+    - **g** : r-x (lecture, exécution)
+    - **o** : r-- (lecture)
+
+
+# Processus et gestion
+
+- Un **processus** est un programme en cours d'exécution.
+- Chaque processus possède un identifiant (**PID**).
+- Les processus peuvent être listés, surveillés et arrêtés.
+
+**Commandes utiles :**
+- `ps faux` : liste tous les processus.
+- `top` (`htop`, `btop`) : affiche les processus en temps réel.
+- `kill <PID>` : termine un processus (exemple : `kill 1234`).
+
+
+# Signaux et commande `kill`
+
+- La commande `kill` envoie un **signal** à un processus identifié par son PID.
+- Par défaut, le signal envoyé est **SIGTERM** (15), qui demande l'arrêt gracieux du processus.
+- On peut spécifier un autre signal, par exemple : **SIGKILL** (9) : arrêt forcé et immédiat du processus.
+
+```bash
+kill <PID>        # Envoie SIGTERM (15)
+kill -9 <PID>     # Envoie SIGKILL (9)
+```
+
+<br/>
+
+<!-- class: tip -->
+> `SIGTERM` est une _demande de mise mort_ alors que `SIGKILL` est une exécution.
+
+# Processus
+
+# shell
+
