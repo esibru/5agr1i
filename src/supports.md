@@ -3,6 +3,9 @@
 ## Des notes de cours 
 
 [Une sorte de syllabus à l'ancienne](pdf/agr-notes.pdf)
+[Une sorte de syllabus à l'ancienne](/pdf/agr-notes.pdf)
+[Une sorte de syllabus à l'ancienne](/static/pdf/agr-notes.pdf)
+
 
 ## Les slides
 
