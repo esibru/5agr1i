@@ -22,7 +22,7 @@ export default defineConfig({
             {
                 text: 'Cours',
                 items: [
-                    { text: 'À voir', link: '/index' },
+                    { text: 'Home', link: '/index' },
                     
                 ]
             },
@@ -30,7 +30,7 @@ export default defineConfig({
                 text: '…',
                 items: [
                     { text: 'Organisation', link: '/organisation' },
-                    { text: 'Slides', link: 'slides' },
+                    { text: 'Supports', link: '/supports' },
                     { text: 'Sources', link: '/sources' }
                 ]
             }
