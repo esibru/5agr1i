@@ -8,4 +8,19 @@ La couche applicative (couche 7) du **modèle OSI** est celle qui se situe au so
 
 Dans le **modèle TCP/IP**, la couche applicative englobe les fonctionnalités des couches applicative, présentation et session du modèle OSI. Elle regroupe tous les protocoles qui permettent aux applications de communiquer sur le réseau, comme HTTP, FTP, SMTP ou SNMP.
 
+C'est principalement à cette couche que le cours s'intéresse. 
+
+## Sujets abordés
+
+_Le planning détaillé se trouve sur la [page « organisation »](organisation.md)._
+
+- Rappels divers
+- Première connexion à une machine (bonnes pratiques)
+- DNS
+- SSH
+- SMTP
+- HTTP(s)
+- LDAP
+
+
 …

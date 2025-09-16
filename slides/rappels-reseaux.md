@@ -208,6 +208,17 @@ Exemple :  192 . 168 .  1  . 10
 
 ---
 
+## Pourquoi la plage privée Classe B est en /12 ?
+
+- Historiquement, la **classe B** correspond à des réseaux en `/16` (soit 65 536 adresses par réseau).
+- Cependant, la plage privée `172.16.0.0/12` regroupe **plusieurs réseaux de classe B privés** de `172.16.0.0` à `172.31.255.255`.
+- Le préfixe `/12` permet d’englober **16 réseaux de classe B** (de `172.16.0.0/16` à `172.31.0.0/16`) dans une seule plage privée.
+- Cela offre une grande flexibilité pour créer de nombreux sous-réseaux privés.
+
+<!-- class: note -->
+> **En résumé :**  
+> La notation `/12` pour la plage privée permet de couvrir tous les réseaux privés de classe B, et pas seulement un seul réseau en `/16`.
+
 ## Pourquoi la plage privée Classe C est en /16 ?
 
 - Historiquement, la **classe C** correspond à des réseaux en `/24` (soit 256 adresses par réseau).
