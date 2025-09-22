@@ -23,6 +23,7 @@ export default defineConfig({
                 text: 'Cours',
                 items: [
                     { text: 'Home', link: '/index' },
+                    { text: 'Travaux dirigés', link: 'tds'}
                     
                 ]
             },

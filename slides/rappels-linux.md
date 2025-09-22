@@ -291,8 +291,8 @@ chage -l alice
 
 `userdel <user>` : suppression (_delete_) de l'utilisateur 
 `deluser <user>` : suppression de l'utilisateur
-    - `--remove-home` supprime également le dossier personnel (`HOME`)
-    - `--remove-all-files` (plus fort) supprime tous les fichies du _user_
+- `--remove-home` supprime également le dossier personnel (`HOME`)
+- `--remove-all-files` (plus fort) supprime tous les fichies du _user_
 
 <br />
 
@@ -315,12 +315,17 @@ Le **boot** est le processus de démarrage d'un ordinateur, depuis la mise sous 
 - **BIOS** (_Basic Input/Output System_) : ancien système d'amorçage, interface simple, limitations (disques < 2 To, mode 16 bits).
 - **UEFI** (_Unified Extensible Firmware Interface_) : moderne, interface graphique, support des disques GPT (> 2 To), plus sécurisé (Secure Boot).
 
+<br/>
+<center>
+
 | BIOS | UEFI |
 |------|------|
-| Mode texte | Interface graphique |
 | MBR | GPT |
 | < 2 To | > 2 To |
 | Ancien | Moderne |
+
+</center>
+
 
 
 # Bootloader : LILO vs GRUB(2)
@@ -328,11 +333,17 @@ Le **boot** est le processus de démarrage d'un ordinateur, depuis la mise sous 
 - **LILO** (_LInux LOader_) : ancien, simple, peu flexible, ne supporte pas les systèmes de fichiers modernes.
 - **GRUB(2)** (_GRand Unified Bootloader_) : actuel, flexible, support de nombreux OS, interface graphique, édition dynamique.
 
+<br/>
+<center>
+
 | LILO | GRUB(2) |
 |------|---------|
 | Statique | Dynamique |
 | Peu d'options | Menu interactif |
 | Obsolète | Standard actuel |
+
+</center>
+
 
 # Chargement du noyau
 
@@ -342,7 +353,7 @@ Le **boot** est le processus de démarrage d'un ordinateur, depuis la mise sous 
 **Processus :**
 1. Le bootloader charge `vmlinuz` et `initrd.img` en mémoire.
 2. Le noyau s'initialise et monte le système de fichiers racine.
-3. L'init démarre les services système.
+3. L'_init_ démarre les services système.
 
 
 # SysV init vs systemd
@@ -350,11 +361,15 @@ Le **boot** est le processus de démarrage d'un ordinateur, depuis la mise sous 
 - **SysV init** : historique, scripts dans `/etc/init.d/`, séquentiel, moins rapide.
 - **systemd** : moderne, parallélise le démarrage, gestion avancée des services, journalisation intégrée.
 
+<center>
+
 | SysV init | systemd |
 |-----------|---------|
 | Scripts shell | Unités (unit files) |
 | Démarrage séquentiel | Démarrage parallèle |
 | Moins flexible | Contrôle avancé |
+
+</center>
 
 <!-- class: tip -->
 > **systemd** est aujourd'hui le système d'initialisation par défaut sur la plupart des distributions Linux.
@@ -500,6 +515,7 @@ apt remove <pkg>     # Supprime un paquet
 apt search <mot>     # Recherche un paquet
 apt show <pkg>       # Affiche les infos d’un paquet
 ```
+<br/>
 
 <!-- class: tip -->
 > Utilisez `apt autoremove` pour supprimer les paquets inutiles après une désinstallation.
