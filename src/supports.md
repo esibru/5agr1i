@@ -10,7 +10,7 @@
 - Rappels linux [[pdf](slides/rappels-linux.pdf)] [[html](slides/rappels-linux.html)]
 - Rappels réseaux [[pdf](slides/rappels-reseaux.pdf)] [[html](slides/rappels-reseaux.html)]
 - SSH [[pdf](slides/ssh.pdf)] [[html](slides/ssh.html)]
-
+- DNS [[pdf](slides/dns.pdf)] [[htmal](slides/html)]
 
 _Les slides du cours sont disponibles en `pdf` et en `html`._
 
