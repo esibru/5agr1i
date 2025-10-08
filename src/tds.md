@@ -16,8 +16,9 @@ d’un de ses comptes.
 | Objectif  | Description      |
 |-----------|------------------|
 | Serveur DNS « à cache seul » | Installation et mise en pratique d’un serveur DNS qui résout et met en cache les requêtes.    |
-| Serveur DNS menteur          | Mise en place d’un serveur DNS capable de bloquer ou de rediriger certaines résolutions.      |
 | Serveur DNS maître d'une zone locale  | Installation d’un serveur DNS maître pour gérer une zone locale et sa configuration.          |
+| Serveur DNS menteur          | Mise en place d’un serveur DNS capable de bloquer ou de rediriger certaines résolutions.      |
+
 
 **Durée estimée :** 4 heures (exposé oral compris)
 
