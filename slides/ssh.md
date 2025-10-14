@@ -156,7 +156,7 @@ _paginate: false
 # SSH
 
 
-SSH (Secure Shell) est un protocole de communication sécurisé qui permet aux utilisateurs et utilisatrices de se connecter à un serveur distant et d'exécuter des commandes à distance.
+SSH (_Secure Shell_) est un protocole de communication sécurisé qui permet aux utilisateurs et utilisatrices de se connecter à un serveur distant et d'exécuter des commandes à distance.
 
 # Ateliers de recherche
 

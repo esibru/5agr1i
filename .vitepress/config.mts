@@ -23,7 +23,8 @@ export default defineConfig({
                 text: 'Cours',
                 items: [
                     { text: 'Home', link: '/index' },
-                    { text: 'Travaux dirigés', link: 'tds'}
+                    { text: 'TD SSH', link: 'td-ssh' },
+                    { text: 'TD DNS', link: 'td-dns'}
                     
                 ]
             },

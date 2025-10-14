@@ -1,24 +1,12 @@
-# Travaux dirigés
+# Laboratoire DNS
 
-## SSH
-
-_Un serveur ssh est normalement déjà installé sur la machine._
-
-- Vérifier si sa configuration est « sécurisée » au sens décrit dans les slides. 
-- Créer deux comptes `user1` et `user2`; le premier avec un mot de
-passe dérivé du nom du compte et le second avec un mot de passe de 4 caractères minuscules aléatoires.  
-    Demander l’IP de son voisin et essayer de cracker le mot de passe
-d’un de ses comptes.
-
-
-## DNS
-
-| Objectif  | Description      |
-|-----------|------------------|
-| Serveur DNS « à cache seul » | Installation et mise en pratique d’un serveur DNS qui résout et met en cache les requêtes.    |
-| Serveur DNS maître d'une zone locale  | Installation d’un serveur DNS maître pour gérer une zone locale et sa configuration.          |
-| Serveur DNS menteur          | Mise en place d’un serveur DNS capable de bloquer ou de rediriger certaines résolutions.      |
-
+| Objectifs |
+|:-----------|
+| Comprendre le fonctionnement des serveurs DNS et leur rôle dans la résolution de noms |
+| Appliquer les concepts de configuration DNS en implémentant un serveur à cache seul |
+| Créer une zone DNS maître avec différents types d'enregistrements |
+| Synthétiser une solution DNS complète incluant la résolution directe et inverse |
+| Critiquer les implications éthiques et politiques du filtrage DNS |
 
 **Durée estimée :** 4 heures (exposé oral compris)
 
