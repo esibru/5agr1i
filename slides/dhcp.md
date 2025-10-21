@@ -151,10 +151,11 @@ _paginate: false
 
 # Atelier de recherche
 
-**Que fait cette commande. Expliquer.**
+**Que fait cette commande `dhclient -v`** 
+**Expliquer.**
 
 <!--
-_class: inverted
+_class: inverted-orange
 -->
 
 # DHCP - Exemple d'exécution
@@ -358,7 +359,7 @@ Le filtre « qui va bien » :
 udp.port == 67 || udp.port == 68
 ```
 <!-- 
-_class: inverted
+_class: inverted-orange
 -->
 
 ---
@@ -403,7 +404,7 @@ _paginate: false
 <br/>
 <br/>
 
-Depuis 2022, l'ISC (_Internet Software Consortium_) recommande `kea-dhcp*` (voir plus loin).
+Depuis 2022, l'ISC (_Internet Software Consortium_) recommande **Kea DHCP** (voir plus loin) au lieu de **ISC DHCP**.
 
 <!--
 _class: inverted
@@ -752,3 +753,32 @@ ainsi que le serveur DDNS
     }
 }
 ```
+
+
+
+
+---
+Slides dans le cadre de mes cours.
+<span class="square"></span>
+
+### Qui suis-je ? 
+Pierre Bettens (_pbt_)  
+[blog.namok.be](https://blog.namok.be)
+pbettens@he2b.be · bettensp@helha.be
+
+### Crédits
+GNU linux, _markdown_, Codium, Marpit
+
+Licence WTFL
+
+<style scoped>
+    section {text-align: center;}
+    .square {
+        margin: 15px auto;
+        display: block;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        background-color: peru;
+    }
+</style>

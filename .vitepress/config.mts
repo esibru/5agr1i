@@ -24,7 +24,8 @@ export default defineConfig({
                 items: [
                     { text: 'Home', link: '/index' },
                     { text: 'TD SSH', link: 'td-ssh' },
-                    { text: 'TD DNS', link: 'td-dns'}
+                    { text: 'TD DNS', link: 'td-dns' },
+                    { text: 'TD DHCP', link: 'td-dhcp' }
                     
                 ]
             },
