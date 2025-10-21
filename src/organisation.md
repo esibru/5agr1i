@@ -47,3 +47,17 @@ Planning informatif (peut-être sujet à des changements).
 | 10     | LDAP                   | Administrer et sécuriser un annuaire LDAP. | **LDAP** (suite)|
 | 11     | LDAP             | Évaluer les usages avancés de LDAP.  | **LDAP** (suite) |
 | 12     | _Récupération_, <br/>réponse aux questions,  <br/>fin du travail                | Synthétiser les connaissances acquises.  |— |
+
+## Pendant les manips
+
+Pendant que vous faites vos _manips_ : 
+
+1. complétez un document reprenant toutes vos manipulations.  Incluez :
+    - Les contenus de vos fichiers de configuration
+    - Vos démarches
+    - Les problèmes rencontrés
+    - Les solutions et moyens utilisés
+
+2. consultez les pages de manuels (_si si, ça reste intéressant_)
+    - commencez par un `man man` si vous ne savez pas ce qu'est une page de manuel
+    

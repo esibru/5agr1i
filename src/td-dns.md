@@ -10,25 +10,6 @@
 
 **Durée estimée :** 4 heures (exposé oral compris)
 
-:::tip Conseil 
-Au fur et à mesure de vos travaux, complétez un document reprenant toutes vos manipulations.  
-Incluez :
-- Les contenus de vos fichiers de configuration
-- Vos démarches
-- Les problèmes rencontrés
-- Les solutions et moyens utilisés
-
-Ce document vous sera utile pour vos révisions.
-:::
-
-:::tip Conseil
-Les pages de manuel restent toujours intéressantes : 
-- `man named`
-- `man named.conf`
-- `man dig`
-- Répertoire `/usr/share/doc/bind`
-:::
-
 ### Serveur DNS à cache seul (Résolveur)
 
 Implémentez sur votre machine un serveur DNS à cache seul.  
