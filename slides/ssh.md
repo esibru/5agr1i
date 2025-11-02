@@ -294,7 +294,52 @@ _Illustration avec des pots de peinture_
 
 - **Elliptic Curve Diffie-Hellman** `ECDH` se base sur les courbes elliptiques
 
+# Cryptographie - Échange de clés - Diffie-Hellman
 
+**Exemple**
+
+Données communes :
+- Nombre premier `P = 419`
+- Générateur `G = 7`
+
+**Génération des clés privées :**
+
+<div class='columns'>
+<div>
+
+**Alice** « choisit » `a = 178`  
+Envoie à Bob :  
+`A = 7^178 mod 419 = 208`
+
+</div>
+<div>
+
+**Bob** « choisit » `b = 344`  
+Envoie à Alice :  
+`B = 7^344 mod 419 = 49`
+
+</div>
+</div>
+
+---
+**Exemple** (suite)
+
+**Calcul de la clé partagée :**
+
+<div class='columns'>
+<div>
+
+Alice calcule :  
+`K = 49^178 mod 419 = 107`
+
+</div>
+<div>
+
+Bob calcule :  
+`K = 208^344 mod 419 = 107`
+
+</div>
+</div>
 
 
 # Cryptographie asymétrique
@@ -478,7 +523,16 @@ Changer de port ?
 - **OUI - NON**
 - _knocking_
 
+# Exercice
 
+Installer un serveur ssh
+- Créer 3 comptes `user1`, `user2`, `user3`; le premier avec un mot de
+passe dérivé du nom du compte, le second avec un mot de passe
+du dictionnaire et le troisième avec un mot de passe de 4
+caractères minuscules aléatoires.
+- Demander l’IP de son voisin et essayer de cracker le mot de passe
+d’un de ses comptes.
+- Mettre en place le knocking
 
 
 

@@ -11,7 +11,7 @@
 - Rappels réseaux [[pdf](slides/rappels-reseaux.pdf)] [[html](slides/rappels-reseaux.html)]
 - SSH [[pdf](slides/ssh.pdf)] [[html](slides/ssh.html)]
 - DNS [[pdf](slides/dns.pdf)] [[html](slides/dns.html)]
-- DHCP [[pdf](slides/dhcp.pdf)] [[html](slides/dhcp.html)]
+- SAMBA [[pdf](slides/samba.pdf)] [[html](slides/samba.html)]
 
 _Les slides du cours sont disponibles en `pdf` et en `html`._
 

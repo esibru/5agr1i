@@ -25,7 +25,7 @@ export default defineConfig({
                     { text: 'Home', link: '/index' },
                     { text: 'TD SSH', link: 'td-ssh' },
                     { text: 'TD DNS', link: 'td-dns' },
-                    { text: 'TD DHCP', link: 'td-dhcp' }
+                    { text: 'TD SAMBA', link: 'td-samba' },
                     
                 ]
             },
@@ -71,6 +71,7 @@ export default defineConfig({
             infoLabel: 'INFO',
             detailsLabel: 'Détails ⬇'
         },
+        breaks: true,
         config: (md) => {
             md.use(footnote)
         }
