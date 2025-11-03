@@ -25,7 +25,9 @@ export default defineConfig({
                     { text: 'Home', link: '/index' },
                     { text: 'TD SSH', link: 'td-ssh' },
                     { text: 'TD DNS', link: 'td-dns' },
-                    { text: 'TD SAMBA', link: 'td-samba' },
+                    { text: 'TD DHCP', link: 'td-dhcp' },
+                    { text: 'TD PAM', link: 'td-pam' },
+                    //{ text: 'TD SAMBA', link: 'td-samba' },
                     
                 ]
             },
