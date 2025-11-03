@@ -32,3 +32,8 @@ Les slides sont générés grâce à [Marp](https://marp.app/).
     - https://esibru.github.io/5clo1r/slides/clo1-intro.html
     - https://esibru.github.io/5clo1r/slides/clo1-intro.pdf
 
+
+## Infos perso
+
+Manip SSH/PAM
+https://std.rocks/fr/setup-ssh-2fa-debian-13.html

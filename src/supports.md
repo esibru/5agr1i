@@ -12,6 +12,8 @@
 - SSH [[pdf](slides/ssh.pdf)] [[html](slides/ssh.html)]
 - DNS [[pdf](slides/dns.pdf)] [[html](slides/dns.html)]
 - SAMBA [[pdf](slides/samba.pdf)] [[html](slides/samba.html)]
+- PAM [[pdf](slides/pam.pdf)] [[html](slides/pam.html)]
+
 
 _Les slides du cours sont disponibles en `pdf` et en `html`._
 

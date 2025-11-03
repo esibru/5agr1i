@@ -54,12 +54,27 @@ From here you can go back and get a real configuration going, hopefully after yo
 
 #### Commande `su`
 
-- Modifier `/etc/pam.d/su` pour que `root` entre son mot de passe
-- Puis modifier pour que **aucun utilisateur** n’ait besoin de mot de passe
-- Tester également :
-    - les restriction « temporelle » : pas de `su` entre 10h15 et 10h30;
-    - les restriction de « lieu » : pas de `su` d'un terminal, uniquement depuis une console;
-    - l'un ou l'autre paramètre au choix
+Les premiers exercices s'intéressent à la commande `su` dont la configuration se fait dans `/etc/pam.d/su`. 
+
+:::warning Attention
+Ne pas confondre `/usr/bin/su` et `/etc/pam.d/su`: le premier est le binaire `su` tandis que le second est bien son fichier de configuration PAM.
+:::
+
+:::info Exercice 1
+Modifier `/etc/pam.d/su` pour que `root` entre son mot de passe
+:::
+
+:::info Exercice 2
+Modifier `/etc/pam.d/su` pour que **aucun utilisateur** n’ait besoin de mot de passe
+:::
+
+:::info Exercice 3
+Tester ce qui suit en utilisant le _module qui va bien_:
+
+- les restriction « temporelle » : pas de `su` entre 10h15 et 10h30;
+- les restriction de « lieu » : pas de `su` d'un terminal, uniquement depuis une console;
+- l'un ou l'autre paramètre au choix
+:::
 
 … et ensuite tout remettre en ordre
 
@@ -70,22 +85,24 @@ Apprenons comment configurer PAM afin qu'il limite l'accès à certains utilisat
 
 Nous allons utiliser le module `pam_listfile.so` (dont vous pouvez lire la doc dans le manuel de l'administrateur PAM). Il faudra donc utiliser cette directive… avec les paramètres qui vont bien.
 
-``config
+```config
 auth required pam_listfile.so
 ```
 
-Les paramètres ont une signification. Par exemple, si je ne veux autoriser que les utilisateurs se trouvant listés dans le fichier — que je devrais créer bine sûr — `/etc/pam.d/list-authusers`, je peux écrire;
+Les paramètres ont une signification. Par exemple, si je ne veux autoriser que les utilisateurs se trouvant listés dans le fichier — que je devrais créer bien sûr — `/etc/pam.d/list-authusers`, je peux écrire;
 
 ```ini
 auth required pam_listfile.so onerr=succeed item=user \
-sense=allow file=/etc/pam.d/list-auth-users
+    sense=allow file=/etc/pam.d/list-auth-users
 ```
 
-Exercice 1 Configurez PAM afin que seuls les utilisateurs faisant partie du groupe ssh puissent se
-connecter en ssh à votre machine.
+:::tip Exercice 4
+Configurez PAM afin que seuls les utilisateurs faisant partie du groupe `ssh` puissent se connecter en ssh à votre machine.
+:::
 
-Exercice 2 Trouver un module intéressant dans la documentation de PAM et le mettre en œuvre.
-
+:::info Exercice 5 
+Trouver un module intéressant dans la documentation de PAM et le mettre en œuvre.
+:::
 
 ## Manipulation développeur
 
@@ -146,5 +163,7 @@ Pour rappel, vous devez lier les librairies PAM lors de la compilation… ce qui
 gcc check_user.c -o check_user -lpam -lpam_misc -ldl
 ```
 
-Lorsque ce programme compile, ajoutez son fichier de configuration PAM dans le répertoire
-pam.d et testez-le.
+:::info Exercice 6
+Lorsque ce programme compile, ajoutez son fichier de configuration PAM dans le répertoire _qui va bien_ (_aka `/etc/pam.d`) et testez-le.
+:::
+
