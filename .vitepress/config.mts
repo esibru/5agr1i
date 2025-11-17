@@ -27,6 +27,7 @@ export default defineConfig({
                     { text: 'TD DNS', link: 'td-dns' },
                     { text: 'TD DHCP', link: 'td-dhcp' },
                     { text: 'TD PAM', link: 'td-pam' },
+                    { text: 'TD HTTP[S]', link: 'td-https-s' },
                     //{ text: 'TD SAMBA', link: 'td-samba' },
                     
                 ]
