@@ -185,7 +185,7 @@ _paginate: false
 - LDIF
 
 ---
-![bg](images/yellow_world_by_Dieffi.jpg)
+![bg](images/yellow_world_by_Dieffi_1200.jpg)
 
 <!-- 
 _class: highlight 
