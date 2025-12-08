@@ -14,6 +14,7 @@
 <!--- SAMBA [[pdf](slides/samba.pdf)] [[html](slides/samba.html)]-->
 - PAM [[pdf](slides/pam.pdf)] [[html](slides/pam.html)]
 - HTTP[S] [[pdf](slides/http-s-webservers.pdf)] [[html](slides/http-s-webservers.html)]
+- LDAP [[pdf](slides/ldap.pdf)] [[html](slides/ldap.html)]
 
 
 _Les slides du cours sont disponibles en `pdf` et en `html`._
