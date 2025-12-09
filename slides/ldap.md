@@ -380,6 +380,99 @@ _footer: ''
 - **onelevel** – les enfants directs
 - **subtree** – toute la sous-arborescence
 
+# LDAP et TLS
+
+<!-- _class: inverted -->
+
+---
+
+## LDAP-TLS 
+
+**Pourquoi sécuriser LDAP ?**
+
+Par défaut, LDAP transmet **en clair** :
+
+- Les requêtes de recherche
+- Les données retournées
+- **Les mots de passe** lors du `bind`
+
+→ Faille de sécurité majeure !
+
+---
+
+## LDAP-TLS 
+<br/>
+
+| Méthode | Port | Description |
+|---------|------|-------------|
+| **LDAPS** | 636 | TLS dès la connexion <br/>Initiation d'une connexion TLS sur un autre port (comme HTTPS) |
+| **StartTLS** | 389 | Upgrade en TLS<br/>Prénégotiation d'une connexion TLS (StartTLS) sur le port standard |
+
+---
+
+## LDAP-TLS
+
+**Configuration TLS (serveur)**
+
+Après la création de certificats (CA, certificat serveur et clé publique), exemple de configuration
+
+```ldif
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/ldap/tls/ca.crt
+-
+add: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/ldap/tls/server.crt
+-
+add: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/ldap/tls/server.key
+```
+
+---
+
+## LDAP-TLS
+
+**Configuration LDAPS (port 636)**
+
+Pour activer LDAPS, modifier `/etc/default/slapd` :
+
+```bash
+SLAPD_SERVICES="ldap:/// ldaps:/// ldapi:///"
+```
+
+Puis redémarrer le service :
+
+```bash
+systemctl restart slapd
+```
+<br/>
+
+<!-- class: note -->
+> **Remargue**
+> LDAPS nécessite la configuration TLS préalable (certificats)
+
+
+---
+
+**Tests connexion sécurisée**
+
+**StartTLS** (port 389)
+
+```bash
+ldapsearch -ZZ -H ldap://server -x \
+    -b "dc=example,dc=org" "(objectclass=*)"
+```
+- `-ZZ` pour initier StartTLS
+
+**LDAPS** (port 636)
+
+```bash
+ldapsearch -H ldaps://server -x \
+    -b "dc=example,dc=org" "(objectclass=*)"
+```
+- `ldaps` pour se connecter sur le port dédié `636`
+
 
 # OpenLDAP
 ![bg](images/books.png)
