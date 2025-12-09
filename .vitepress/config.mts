@@ -28,6 +28,7 @@ export default defineConfig({
                     { text: 'TD DHCP', link: 'td-dhcp' },
                     { text: 'TD PAM', link: 'td-pam' },
                     { text: 'TD HTTP[S]', link: 'td-http-s' },
+                    { text: 'TD LDAP', link: 'td-ldap' },
                     //{ text: 'TD SAMBA', link: 'td-samba' },
                     
                 ]
