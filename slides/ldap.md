@@ -374,6 +374,40 @@ _footer: ''
 
 ---
 
+## Modèle fonctionnel
+
+Les opérations LDAP définies par le protocole :
+
+| Catégorie | Opération, description |
+|-----------|-------------|
+| **authentification** | `bind`, `unbind`, `abandon`, connection, déconnexion au serveur
+| **requête** | `search` pour la recherche et `compare` pour la comparaison d'un attribut
+| **mise à jour** | `add`, `delete`, `modify` pour le CRUD et `modrdn` pour la modification dans un _shell_|
+
+
+À toutes ces opération correspond une commandes `ldap_foo_`
+
+---
+
+## Modèle fonctionnel
+
+`ldapsearch` – recherche dans l'annuaire
+<br/>
+
+```bash
+ldapsearch -x -H ldap://localhost \
+  -b "dc=example,dc=org" \
+  "(objectclass=inetOrgPerson)" cn mail
+```
+
+- `-x` : authentification simple
+- `-H` : URI du serveur
+- `-b` : base de recherche (_base DN_)
+- `"(objectclass=inetOrgPerson)"` : filtre
+- `cn mail` : attributs à retourner
+
+---
+
 ## Portée de la recherche (search scope)
 
 - **base** – l'entrée elle-même
@@ -406,11 +440,71 @@ Par défaut, LDAP transmet **en clair** :
 | Méthode | Port | Description |
 |---------|------|-------------|
 | **LDAPS** | 636 | TLS dès la connexion <br/>Initiation d'une connexion TLS sur un autre port (comme HTTPS) |
-| **StartTLS** | 389 | Upgrade en TLS<br/>Prénégotiation d'une connexion TLS (StartTLS) sur le port standard |
+| **StartTLS** | 389 | Upgrade en TLS<br/>Prénégotiation d'une connexion TLS (_StartTLS_) sur le port standard |
+
+<br/>
+
+La configuration dépend du server (cfr. _infra_)
+
+
+---
+## Serveurs
+
+- OpenLDAP
+- Microsoft Active Directory
+- Netscape Directory Server
+
+<!--
+_class: inverted
+-->
 
 ---
 
-## LDAP-TLS
+## Clients
+
+- Browsers
+- MS Windows
+- PAM LDAP
+- API (Perl, Java, …)
+- Samba
+
+<!--
+_class: inverted
+-->
+
+
+# OpenLDAP
+![bg](images/books.png)
+<!-- 
+_class: highlight 
+_footer: ''
+_paginate: false
+-->
+
+---
+
+## OpenLDAP
+
+Implémentation libre de LDAP
+
+http://openldap.org
+
+- **package** : `slapd`, `ldap-utils`
+- **dæmons** : `slapd`, `slurpd`
+
+---
+## OpenLDAP
+
+Configuration OpenLDAP
+
+- Choix des schémas
+- `/etc/ldap/slapd.d`
+- Utilitaires `ldapfoo`
+
+
+---
+
+## Open LDAP-TLS
 
 **Configuration TLS (serveur)**
 
@@ -430,9 +524,6 @@ olcTLSCertificateKeyFile: /etc/ldap/tls/server.key
 ```
 
 ---
-
-## LDAP-TLS
-
 **Configuration LDAPS (port 636)**
 
 Pour activer LDAPS, modifier `/etc/default/slapd` :
@@ -474,50 +565,6 @@ ldapsearch -H ldaps://server -x \
 - `ldaps` pour se connecter sur le port dédié `636`
 
 
-# OpenLDAP
-![bg](images/books.png)
-<!-- 
-_class: highlight 
-_footer: ''
-_paginate: false
--->
-
----
-
-## OpenLDAP
-
-Implémentation libre de LDAP
-
-http://openldap.org
-
-- **package** : `slapd`, `ldap-utils`
-- **dæmons** : `slapd`, `slurpd`
-
----
-## OpenLDAP
-
-Configuration OpenLDAP
-
-- Choix des schémas
-- `/etc/ldap/slapd.d`
-- Utilitaires `ldapfoo`
-
----
-## Serveurs
-
-- OpenLDAP
-- Microsoft Active Directory
-- Netscape Directory Server
-
----
-
-## Clients
-
-- Browsers
-- MS Windows
-- PAM LDAP
-- API (Perl, Java, …)
-- Samba
 
 ---
 ## Références
@@ -525,6 +572,7 @@ Configuration OpenLDAP
 - [IANA enterprise numbers](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
 - [OpenLDAP QuickStart](https://www.openldap.org/doc/admin24/quickstart.html)
 - [LinuxMag (vieil) article mongueurs](http://articles.mongueurs.net/magazines/linuxmag65.html)
+
 
 
 ---

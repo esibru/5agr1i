@@ -57,7 +57,7 @@ Vérifier que tout est fonctionnel en ajoutant une page `index.php` au site web 
 
 ### 3. VirtualHost
 
-Créer deux sites différents; `red.esigoto.info` et `blue.esigoto.info` par exemple. Le premier rendant la page `index.hmtl` et le second la page `index.php` précédemment créées. 
+Créer deux sites différents; `red.esigoto.info` et `blue.esigoto.info` par exemple. Le premier rendant la page `index.html` et le second la page `index.php` précédemment créées. 
 
 :::info Qu'est-ce qu'un VirtualHost ?
 Un VirtualHost permet d'héberger plusieurs sites web sur un même serveur Apache. Chaque site peut avoir :
@@ -70,7 +70,7 @@ Un VirtualHost permet d'héberger plusieurs sites web sur un même serveur Apach
 Il faudra modifier votre serveur DNS (ou bien votre fichier `/etc/hosts` si vous voulez tricher 😉).
 :::
 
-Un hôte virtuel _virtual host_ se crée dans un fichier `/etc/apache2/sites-available/red.esigoto.info.conf` :
+Un hôte virtuel _virtual host_ se crée dans un fichier `/etc/apache2/sites-available/red.esigoto.info.conf` [^f1] :
 
 ```apache
 <VirtualHost *:80>
@@ -88,6 +88,7 @@ Activez le site :
 a2ensite red.esigoto.info
 systemctl reload apache2
 ```
+[^f1]: En fait, le choix du nom du fichier est libre — mais pas l'extension — et je propose ici un moyen simple de s'y retrouver lorsque l'on a plusieurs — beaucoup — de _vhosts_.
 
 ### 4. Service web avec VirtualHost dédié
 
@@ -106,6 +107,14 @@ Exemple pour un service `wiki.esigoto.info` :
     CustomLog ${APACHE_LOG_DIR}/wiki-access.log combined
 </VirtualHost>
 ```
+
+:::warning Remarque
+Dans le cadre du laboratoire _vlab_, l'IP de serveur n'étant pas publique, le service web n'est pas accessible sur Internet… **mais**… 
+
+La machine `pica` accepte n'importe quel nom de la forme `placeholder.vlab.esigoto.info` et redirige vers la machine `placeholder.in.esigoto.info`. Si le _vhost_ de la machine `placeholder` est `placeholder.vlab.esigoto.info`, le site sera servi. 
+
+_Cerise sur le gâteau_ 🍒 un certificat `https` est automatiquement  _offert_ (merci Caddy server).
+:::
 
 ### 5. HTTPS avec Let's Encrypt (bonus)
 

@@ -219,6 +219,9 @@ Exemple :  192 . 168 .  1  . 10
 > **En résumé :**  
 > La notation `/12` pour la plage privée permet de couvrir tous les réseaux privés de classe B, et pas seulement un seul réseau en `/16`.
 
+
+---
+
 ## Pourquoi la plage privée Classe C est en /16 ?
 
 - Historiquement, la **classe C** correspond à des réseaux en `/24` (soit 256 adresses par réseau).
@@ -376,6 +379,17 @@ Exemple de sortie :
 192.168.1.1 dev eth0 lladdr 00:11:22:33:44:55 REACHABLE
 ```
 
+
+--- 
+## Commande `ip`
+<br/>
+
+<!-- class: warning-->
+
+> La commande `ip` permet une configuration à chaud. Pour une configuration pérenne, modifier le fichier `/etc/network/interfaces`.
+
+
+
 ---
 
 ## Commande `netstat`
@@ -422,8 +436,3 @@ esi-bru.be.             10800   IN      A       178.32.5.10
 
 
 
----
-pom
-
----
-pom

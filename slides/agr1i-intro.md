@@ -212,3 +212,41 @@ Sujets abordés
 Les concepts essentiels de la couche applicative du modèle OSI, notamment :
 
 **SMTP** (_Simple Mail Transfer Protocol_) ~ **DNS** (_Domain Name Service_) ~ **SAMBA** (_SMB/CIFS_) ~ **PAM** (_Pluggable Authentication Modules_) ~ **LDAP** (_Lightweight Directory Access Protocol_) ~ **ACL** (_Access Control List_) ~ **HTTP(s)** (_Hyper Text Transfer Protocol_) 
+
+
+
+
+
+
+
+
+
+---
+Slides dans le cadre de mes cours.
+<span class="square"></span>
+
+### Qui suis-je ? 
+Pierre Bettens (_pbt_)  
+[blog.namok.be](https://blog.namok.be)
+pbettens@he2b.be · bettensp@helha.be
+
+### Crédits
+GNU linux, _markdown_, Codium, Marpit
+
+Licence WTFL
+
+<style scoped>
+    section {text-align: center;}
+    .square {
+        margin: 15px auto;
+        display: block;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        background-color: peru;
+    }
+</style>
+<!--
+_footer: ''
+_paginate: false
+-->
