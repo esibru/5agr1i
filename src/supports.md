@@ -12,6 +12,7 @@
 - SSH [[pdf](slides/ssh.pdf)] [[html](slides/ssh.html)]
 - DNS [[pdf](slides/dns.pdf)] [[html](slides/dns.html)]
 <!--- SAMBA [[pdf](slides/samba.pdf)] [[html](slides/samba.html)]-->
+- DHCP [[pdf](slides/dhcp.pdf)] [[html](slides/dhcp.html)]
 - PAM [[pdf](slides/pam.pdf)] [[html](slides/pam.html)]
 - HTTP[S] [[pdf](slides/http-s-webservers.pdf)] [[html](slides/http-s-webservers.html)]
 - LDAP [[pdf](slides/ldap.pdf)] [[html](slides/ldap.html)]

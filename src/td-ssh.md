@@ -40,7 +40,7 @@ Mettez en place une authentification à deux facteurs (2FA) pour SSH en utilisan
 - Les codes de secours générés doivent être conservés précieusement
 
 :::warning Questions
-- Quelle méthode d'authentification utiliser : clé publique + OTP ou mot de passe + OTP ?
+- Quelle méthode d'authentification utiliser : clé publique + OTP ou mot de passe + OTP ?
 - Comment éviter de se bloquer l'accès en cas de mauvaise configuration ?
 - Que se passe-t-il si on perd son téléphone avec l'application d'authentification ?
 :::
