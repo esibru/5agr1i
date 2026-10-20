@@ -58,6 +58,12 @@ Pendant que vous faites vos _manips_ :
     - Les problèmes rencontrés
     - Les solutions et moyens utilisés
 
+    :::warning Consignes
+    Lorsqu'un dépôt est créé pour vous sur _gitesi_, déposez-y votre rapport. 
+
+    Votre rapport se trouve dans le fichier `README.md` est est rédigé au format _markdown_. 
+    :::
+
 2. consultez les pages de manuels (_si si, ça reste intéressant_)
     - commencez par un `man man` si vous ne savez pas ce qu'est une page de manuel
     
